@@ -26,7 +26,7 @@ RUN yum update && yum install -y nginx
 RUN rm -rf /var/www/html/*
 
 # Copy the Angular build output to the Nginx html directory
-COPY dist/nuxler/ /var/www/html/
+COPY dist/ /var/www/html/
 
 # Expose the port the app runs on
 EXPOSE 80
