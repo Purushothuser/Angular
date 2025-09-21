@@ -1,23 +1,24 @@
 # Use an official Node runtime as a parent image
-FROM node:20.15.0
+# FROM node:20.15.0
+FROM nginx:latest
 
 # Set the working directory inside the container
-WORKDIR /usr/src/app
+# WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json (if available)
-COPY package*.json ./
+# COPY package*.json ./
 
 # Install Angular CLI globally
-RUN npm install -g @angular/cli
+# RUN npm install -g @angular/cli
 
 # Install dependencies from package.json
-RUN npm install
+# RUN npm install
 
 # Copy the rest of the application code to the container
-COPY . .
+# COPY . .
 
 # Build the Angular app in production mode
-RUN ng build
+# RUN ng build
 
 # Install Nginx
 RUN yum update && yum install -y nginx
