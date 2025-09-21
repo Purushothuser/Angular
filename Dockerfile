@@ -21,7 +21,7 @@ FROM nginx:latest
 # RUN ng build
 
 # Install Nginx
-RUN yum update && yum install -y nginx
+# RUN yum update && yum install -y nginx
 
 # Remove default Nginx website
 RUN rm -f /usr/share/nginx/html/*
