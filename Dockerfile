@@ -33,7 +33,7 @@ EXPOSE 80
 
 
 # Copy Nginx configuration
-COPY nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
