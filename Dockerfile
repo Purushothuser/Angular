@@ -11,7 +11,7 @@ COPY src/ /usr/share/nginx/html/
 RUN chmod -R 755 /usr/share/nginx/html/
 
 # Optional: copy custom Nginx config (for SPA routing)
-# COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
 EXPOSE 80
