@@ -23,17 +23,17 @@ RUN ng build
 RUN yum update && yum install -y nginx
 
 # Remove default Nginx website
-RUN rm -rf /var/www/html/*
+RUN rm -f /usr/share/nginx/html/*
 
 # Copy the Angular build output to the Nginx html directory
-COPY dist/ /var/www/html/
+COPY dist/ /usr/share/nginx/html/
 
 # Expose the port the app runs on
 EXPOSE 80
 
 
 # Copy Nginx configuration
-COPY nginx.conf /etc/nginx/nginx.conf
+# COPY nginx.conf /etc/nginx/nginx.conf
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
